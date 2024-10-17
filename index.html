@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Сайт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/seal (2).png" width="64" height="64" alt="Logo">
+                <a class="brand">Evergatis</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="survey.html">Submit a Photo</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">About us</a>
+                        <ul class="dropdown-content">
+                            <li>Email: info@evergatis.com</li>
+                            <li>Phone: +123 456 789</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome!</h1>
+            <p>Save the planet with us</p>
+        </div>
+    </section>
+
+    <section class="about-site">
+        <div class="container">
+            <h2>Discover Antarctica’s Wonders</h2>
+            <p>
+                Explore the mesmerizing beauty of the frozen continent through our carefully curated collection of stunning photographs. From towering icebergs to curious penguins, each image captures the unique essence of this remote and pristine wilderness.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo1"></div>
+                <img src="images\seal (1).png" width="64" height="64" alt="Logo">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@evergatis.com | Phone: +123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h4>ous social medias</h4>
+                <ul class="social-links">
+                    <li><a href="www.facebook.com">Facebook</a></li>
+                    <li><a href="www.instagram.com">Instagram</a></li>
+                    <li><a href="www.tiktok.com">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" class="arrow-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2l-10 10h6v10h8v-10h6z"/>
+        </svg>
+    </a>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            const arrowUp = document.querySelector('.arrow-up');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                arrowUp.style.display = "flex";
+            } else {
+                arrowUp.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
