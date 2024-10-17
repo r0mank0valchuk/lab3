@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/seal (2).png" width="64" height="64" alt="Logo">
+                <a class="brand">Evergatis</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="survey.html">Submit a Photo</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">About us</a>
+                        <ul class="dropdown-content">
+                            <li>Email: info@evergatis.com</li>
+                            <li>Phone: +123 456 789</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Our Art Collection</h1>
+            <p>Explore a curated selection of visual masterpieces</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Gallery Highlights</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery/DO_WestPoint_Island_21A7246_DavidMerron.jpg" alt="Artwork 1">
+                    <div class="overlay">
+                        <h3>A burst of color at West Point Island in the Falklands</h3>
+                        <p>David Merron</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/DO_Grytviken-SG_21A0236_DavidMerron.jpg" alt="Artwork 2">
+                    <div class="overlay">
+                        <h3>Grytviken</h3>
+                        <p>David Merron</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/DO_Elephant-Seal-Pup_Gold-Harbour_SG_21A1119_DavidMerron.jpg" alt="Artwork 3">
+                    <div class="overlay">
+                        <h3>Elephant seal pups congregate</h3>
+                        <p>David Merron</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo1"></div>
+                <img src="images\seal (1).png" width="64" height="64" alt="Logo">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@evergatis.com | Phone: +123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h4>ous social medias</h4>
+                <ul class="social-links">
+                    <li><a href="www.facebook.com">Facebook</a></li>
+                    <li><a href="www.instagram.com">Instagram</a></li>
+                    <li><a href="www.tiktok.com">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" class="arrow-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2l-10 10h6v10h8v-10h6z"/>
+        </svg>
+    </a>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            const arrowUp = document.querySelector('.arrow-up');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                arrowUp.style.display = "flex";
+            } else {
+                arrowUp.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

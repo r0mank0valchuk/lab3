@@ -1,0 +1,410 @@
+:root {
+    --primary-font: 'Arial', sans-serif;
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #758694;
+    --light-gray: #f4f4f4;
+    --dark-gray: #13131b;
+    --border-color: #ddd;
+    --padding: 15px;
+    --heading-size: 48px;
+    --text-size: 18px;
+    --container-width: 80%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+.container {
+    width: var(--container-width);
+    margin: auto;
+}
+
+.navbar {
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--padding) 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.hero {
+    background-image: url('images/index/DO_NickySouness-9311.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-size: auto;
+    width: auto;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: var(--heading-size);
+    font-weight: bold;
+}
+
+footer {
+    background-image: linear-gradient(var(--light-gray), var(--accent-color));
+    color: var(--dark-gray);
+    padding: 20px 0;
+}
+
+.footer-section {
+    margin: 10px 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.about-site {
+    padding: 50px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.about-site h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about-site p {
+    font-size: var(--text-size);
+    line-height: 1.6;
+    color: #555;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.submit-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.submit-form {
+    max-width: 600px;
+    width: 100%;
+    background-color: var(--light-gray);
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.submit-hero {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.submit-hero h2 {
+    font-size: var(--heading-size);
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Стилі для галереї зберігаються без змін */
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.gallery-pic {
+    text-align: center;
+    max-width: 600px;
+}
+
+.gallery-pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery-pic h3,
+.gallery-pic p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.gallery-hero {
+    background-color: #758694;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.gallery-section {
+    padding: 50px 0;
+}
+
+.gallery-section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item h3,
+.gallery-item p {
+    margin: 5px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.about-hero {
+    background-color: #758694;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.about-team {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.about-team h2 {
+    padding: 15px 0;
+}
+
+.about-team p {
+    padding: 10px 0;
+}
+
+/* Стиль для контейнера пошуку */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    border-bottom: 2px solid #333; /* Легка нижня рамка */
+    padding: 5px 0;
+}
+
+/* Стиль для текстового поля */
+.search-bar input[type="text"] {
+    border: none; /* Відсутність рамок */
+    outline: none; /* Відсутність видимої рамки при фокусі */
+    padding: 5px;
+    font-size: 16px;
+    background-color: transparent; /* Прозорий фон */
+    width: 200px; /* Можна змінювати ширину */
+}
+
+/* Стиль для кнопки пошуку */
+.search-bar button {
+    border: none; /* Без рамок */
+    background-color: transparent; /* Прозорий фон */
+    color: #333; /* Темний текст */
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search-bar button:hover {
+    color: #000; /* Трохи темніший текст при наведенні */
+}
+
+/* Стиль для зміни кольору при фокусі */
+.search-bar input[type="text"]:focus {
+    border-bottom: 2px solid #000; /* Підсвічування нижньої рамки */
+}
+
+.arrow-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #7d93a549;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.arrow-up svg {
+    fill: rgb(255, 255, 255);
+    width: 24px;
+    height: 24px;
+}
+
+.arrow-up:hover {
+    background-color: #41435a72;
+    cursor: url('/images/cursor2.png'), auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1;
+    list-style-type: none;
+    border: none;
+    text-align: left;
+    color: black; 
+    font-size: 14px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content li {
+    padding: 8px;
+    cursor: default;
+}
+
+.dropdown-content li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
